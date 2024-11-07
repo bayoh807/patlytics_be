@@ -23,5 +23,13 @@ go mod tidy
 go run main.go
 ```
 
+
+1. /search?keyword={keyword}&&type={type}
+   You can fast search information by company name or patent id ,and This api support fuzzy query
+    type's value accepts "company" and "patent" only
+
+2. /report?company={company name}&&patent={patent id }
+   You can use it to analyze by company name and patent id 
+
 ### You also can use docker to test this project
 
