@@ -28,7 +28,7 @@ func (s *reportServ) Analyze(val *resource.ReportReq) (interface{}, error) {
 		for count := 0; count < 2; count++ {
 			res, err := utils.Claude.SendMessage(prompt)
 			if err != nil || res == "" {
-				return "Sorry, something is wrong. Please try it later.", nil
+				return "Sorry, something is wrong. Please try it later.1", nil
 			} else if toJson, err := s.toJson(res); err == nil {
 				dateObj := time.Date(2023, time.September, 15, 12, 0, 0, 0, time.UTC)
 				date := dateObj.Format("2006-01-02")
@@ -40,10 +40,10 @@ func (s *reportServ) Analyze(val *resource.ReportReq) (interface{}, error) {
 				}, nil
 			} else {
 				count++
-				return "Sorry, something is wrong. Please try it later.", nil
+				return "Sorry, something is wrong. Please try it later.2", nil
 			}
 		}
-		return "Sorry, something is wrong. Please try it later.", nil
+		return "Sorry, something is wrong. Please try it later.3", nil
 	}
 }
 

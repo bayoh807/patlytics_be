@@ -35,12 +35,12 @@ func NewClaudeAI(apiKey string) (*ClaudeAI, error) {
 
 func init() {
 	var err error
-	Claude, err = NewClaudeAI(os.Getenv("API_KEY"))
-	if err != nil {
+	if Claude, err = NewClaudeAI(os.Getenv("API_KEY")); err != nil {
 		panic("failed to initialize Claude")
-	}
+	} else {
+		log.Println("Claude AI initialized successfully")
 
-	log.Println("Claude AI initialized successfully")
+	}
 
 }
 
@@ -67,11 +67,11 @@ func (c *ClaudeAI) SendMessage(message string) (string, error) {
 
 	response, err := c.client.Message(ctx, request)
 	if err != nil {
-		return "", fmt.Errorf("failed to get response from Claude: %w", err)
+		return "", fmt.Errorf("1failed to get response from Claude: %w", err)
 	}
 
 	if len(response.Content) == 0 {
-		return "", fmt.Errorf("received empty response from Claude")
+		return "", fmt.Errorf("2received empty response from Claude")
 	}
 
 	// 返回響應文本
