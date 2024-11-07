@@ -10,7 +10,6 @@ require (
 	github.com/go-playground/validator/v10 v10.22.1
 	github.com/joho/godotenv v1.5.1
 	github.com/madebywelch/anthropic-go/v3 v3.2.2
-	github.com/sashabaranov/go-openai v1.32.5
 )
 
 require (
