@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="edbc7d18-88c9-4504-94ad-0ee500040860" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/Search.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/Search.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/claudeAI.go" beforeDir="false" afterPath="$PROJECT_DIR$/utils/claudeAI.go" afterDir="false" />
     </list>
@@ -88,7 +89,7 @@
     "WebServerToolWindowFactoryState": "false",
     "go.import.settings.migrated": "true",
     "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "/Users/wujunyan/Desktop/programming/interview/terry's company/patlytics_be",
+    "last_opened_file_path": "/Users/wujunyan/Desktop/programming/interview/patlytics/patlytics_be",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm"

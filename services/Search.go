@@ -26,8 +26,10 @@ func (s *reportServ) Analyze(val *resource.ReportReq) (interface{}, error) {
 	} else {
 		prompt := s.makeMessage(*val.Company, *val.Patent, companies.(map[string]interface{}), patents.(map[string]interface{}))
 		for count := 0; count < 2; count++ {
+
 			res, err := utils.Claude.SendMessage(prompt)
 			if err != nil || res == "" {
+				fmt.Printf("err:%s ,res:%s", err, res)
 				return "Sorry, something is wrong. Please try it later.1", nil
 			} else if toJson, err := s.toJson(res); err == nil {
 				dateObj := time.Date(2023, time.September, 15, 12, 0, 0, 0, time.UTC)

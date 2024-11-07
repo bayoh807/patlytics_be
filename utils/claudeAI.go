@@ -17,6 +17,8 @@ type ClaudeAI struct {
 var Claude *ClaudeAI
 
 func NewClaudeAI(apiKey string) (*ClaudeAI, error) {
+
+	fmt.Printf("key: %s \n", os.Getenv("API_KEY"))
 	if apiKey == "" {
 		return nil, fmt.Errorf("API key cannot be empty")
 	}
